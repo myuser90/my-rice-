@@ -1,0 +1,78 @@
+# =====================================
+# CYBER LOOK
+# INTERRUPT / NOTIFICATION SYSTEM LAYER
+# =====================================
+
+font=JetBrainsMono Nerd Font 11
+
+# =====================================
+# BASE SURFACE (UI BACKGROUND LAYER)
+# =====================================
+
+background-color=#1a1a2ae6
+text-color=#cdd6f4ff
+
+border-color=#313244ff
+border-size=1
+border-radius=12
+
+width=360
+height=110
+padding=12
+margin=12
+
+icons=1
+max-visible=5
+
+default-timeout=5000
+
+layer=overlay
+anchor=top-right
+outer-margin=12
+
+progress-color=#4fd6beff
+
+
+# =====================================
+# MOTION FEEL (IMPLICIT BEHAVIOR LAYER)
+# =====================================
+
+# NOTE: mako doesn't support real animations,
+# but these values define perceived behavior
+
+max-history=5
+sort=-time
+
+
+# =====================================
+# URGENCY SYSTEM (STATE HIERARCHY)
+# =====================================
+
+[urgency=low]
+border-color=#313244ff
+background-color=#1a1a2ae6
+text-color=#a6adc8ff
+
+[urgency=normal]
+border-color=#4fd6be88
+background-color=#1a1a2ae6
+text-color=#cdd6f4ff
+
+[urgency=high]
+border-color=#4fd6beff
+background-color=#1a1a2af2
+text-color=#cdd6f4ff
+default-timeout=0
+
+
+# =====================================
+# CRITICAL SYSTEM OVERRIDES (FAULT LAYER)
+# =====================================
+
+[category=error]
+border-color=#f38ba8ff
+text-color=#f38ba8ff
+
+[category=warning]
+border-color=#f9e2afff
+text-color=#f9e2afff
