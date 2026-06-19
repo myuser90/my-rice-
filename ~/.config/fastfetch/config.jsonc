@@ -1,0 +1,98 @@
+{
+  "logo": {
+    "type": "small",
+    "source": "gentoo",
+    "padding": {
+      "top": 1,
+      "left": 4
+    },
+    "color": {
+      "1": "#4fd6be",
+      "2": "#cba6f7"
+    }
+  },
+
+  "display": {
+    "separator": "  ",
+    "color": {
+      "separator": "#313244"
+    }
+  },
+
+  "modules": [
+
+    {
+      "type": "title",
+      "format": "  CYBER SYSTEM NODE :: {user-name}@{host-name}"
+    },
+
+    "separator",
+
+    {
+      "type": "custom",
+      "format": "╭──────────────── SYSTEM CORE ────────────────╮"
+    },
+
+    {
+      "type": "os",
+      "key": "     SYSTEM"
+    },
+    {
+      "type": "host",
+      "key": "  󰌢  NODE"
+    },
+    {
+      "type": "kernel",
+      "key": "  󰒋  CORE"
+    },
+    {
+      "type": "uptime",
+      "key": "  󰅐  UPTIME"
+    },
+
+    "separator",
+
+    {
+      "type": "custom",
+      "format": "├──────────── ENVIRONMENT LAYER ────────────┤"
+    },
+
+    {
+      "type": "wm",
+      "key": "    SESSION"
+    },
+    {
+      "type": "shell",
+      "key": "    SHELL"
+    },
+    {
+      "type": "terminal",
+      "key": "    TERMINAL"
+    },
+    {
+      "type": "packages",
+      "key": "  󰏖  PACKAGES"
+    },
+
+    "separator",
+
+    {
+      "type": "custom",
+      "format": "╰──────────── HARDWARE MATRIX ─────────────╯"
+    },
+
+    {
+      "type": "cpu",
+      "key": "  󰻠  CPU"
+    },
+    {
+      "type": "gpu",
+      "key": "  󰢮  GPU"
+    },
+    {
+      "type": "memory",
+      "key": "  󰍛  MEMORY"
+    }
+
+  ]
+}
