@@ -1,0 +1,239 @@
+/* ==========================================
+   CYBER LOOK 
+   after improvment 
+========================================== */
+
+* {
+    font-family: "JetBrainsMono Nerd Font";
+    font-size: 12px;
+    font-weight: 600;
+    min-height: 0;
+    border: none;
+}
+
+
+/* ==========================================
+   COLOR SYSTEM (UNCHANGED - STABLE IDENTITY)
+========================================== */
+
+@define-color base     #151521;
+@define-color mantle   #181825;
+@define-color crust    #0f0f17;
+
+@define-color surface0 #2a2a3a;
+@define-color surface1 #3b3b52;
+
+@define-color text     #cdd6f4;
+@define-color subtext  #a6adc8;
+
+@define-color gentoo   #4fd6be;
+@define-color mauve    #cba6f7;
+@define-color blue     #89b4fa;
+@define-color red      #f38ba8;
+
+
+/* ==========================================
+   WAYBAR CORE (FLOATING HUD SHELL)
+========================================== */
+
+window#waybar {
+    background: alpha(@base, 0.88);
+    color: @text;
+
+    border-bottom: 1px solid alpha(@surface1, 0.25);
+
+    box-shadow:
+        0 0 0 1px alpha(@crust, 0.8),
+        0 10px 40px rgba(0, 0, 0, 0.65),
+        0 0 25px alpha(@gentoo, 0.10);
+
+    transition: all 0.2s ease;
+}
+
+
+/* ==========================================
+   MODULE BASE (HUD CAPSULE SYSTEM)
+========================================== */
+
+#custom-arch,
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#battery,
+#tray {
+
+    background: alpha(@surface0, 0.22);
+
+    color: @text;
+
+    margin: 6px 4px;
+
+    padding: 0 14px;
+
+    border-radius: 10px;
+
+    border: 1px solid alpha(@surface1, 0.25);
+
+    box-shadow: 0 2px 10px rgba(0,0,0,0.25);
+
+    transition: all 0.18s ease;
+}
+
+
+/* ==========================================
+   HOVER STATE (SYSTEM ACTIVATION FEEDBACK)
+========================================== */
+
+#custom-arch:hover,
+#workspaces:hover,
+#clock:hover,
+#pulseaudio:hover,
+#network:hover,
+#battery:hover,
+#tray:hover {
+
+    background: alpha(@surface0, 0.55);
+
+    border: 1px solid alpha(@gentoo, 0.25);
+
+    box-shadow: 0 0 14px alpha(@gentoo, 0.12);
+}
+
+
+/* ==========================================
+   SYSTEM CORE ICON
+   change the icon to your liking 
+   if you dont use gentoo 
+========================================== */
+
+#custom-arch {
+    color: @gentoo;
+    font-size: 16px;
+    margin-left: 8px;
+}
+
+
+/* ==========================================
+   WORKSPACES (NAVIGATION)
+========================================== */
+
+#workspaces {
+    padding: 0 6px;
+}
+
+#workspaces button {
+    all: unset;
+    color: @subtext;
+
+    margin: 4px;
+    padding: 0 10px;
+
+    border-radius: 8px;
+
+    transition: all 0.18s ease;
+}
+
+#workspaces button:hover {
+    background: alpha(@surface0, 0.55);
+    color: @text;
+}
+
+#workspaces button.active {
+    background: linear-gradient(
+        90deg,
+        alpha(@gentoo, 0.35),
+        alpha(@mauve, 0.15)
+    );
+
+    color: @text;
+
+    border: 1px solid alpha(@gentoo, 0.35);
+}
+
+#workspaces button.urgent {
+    background: alpha(@red, 0.25);
+    color: @text;
+}
+
+
+/* ==========================================
+   CLOCK (CENTER CORE NODE)
+========================================== */
+
+#clock {
+    color: @text;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+
+/* ==========================================
+   AUDIO NODE
+========================================== */
+
+#pulseaudio {
+    color: @gentoo;
+}
+
+#pulseaudio.muted {
+    color: @subtext;
+}
+
+
+/* ==========================================
+   NETWORK STREAM NODE
+========================================== */
+
+#network {
+    color: @blue;
+}
+
+#network.disconnected {
+    color: @red;
+}
+
+
+/* ==========================================
+   POWER SYSTEM NODE
+========================================== */
+
+#battery {
+    color: @gentoo;
+}
+
+#battery.warning {
+    color: #f9e2af;
+}
+
+#battery.critical {
+    color: @red;
+}
+
+#battery.charging {
+    color: @gentoo;
+}
+
+
+/* ==========================================
+   TRAY (BACKGROUND SYSTEM LAYER)
+========================================== */
+
+#tray {
+    background: transparent;
+}
+
+
+/* ==========================================
+   TOOLTIP (SYSTEM OVERLAY)
+========================================== */
+
+tooltip {
+    background: @mantle;
+    border-radius: 10px;
+    border: 1px solid alpha(@surface0, 0.5);
+}
+
+tooltip label {
+    color: @text;
+}
