@@ -1,0 +1,70 @@
+{
+  "layer": "top",
+  "position": "top",
+
+  "height": 34,
+  "spacing": 8,
+
+  "margin-top": 6,
+  "margin-left": 10,
+  "margin-right": 10,
+
+  "modules-left": [
+    "custom/arch",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "clock"
+  ],
+
+  "modules-right": [
+    "pulseaudio",
+    "network",
+    "battery",
+    "tray"
+  ],
+
+  "custom/arch": {
+    "format": "",
+    "tooltip": false
+  },
+
+  "hyprland/workspaces": {
+    "all-outputs": true,
+    "on-click": "activate",
+    "disable-scroll": true,
+    "format": "{icon}"
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "󰥔  {:%I:%M %p}",
+    "tooltip-format": "<big>{:%A, %d %B %Y}</big>"
+  },
+
+  "pulseaudio": {
+    "scroll-step": 5,
+    "format": " {volume}%",
+    "format-muted": "󰝟"
+  },
+
+  "network": {
+    "format-wifi": "󰖩",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰖪"
+  },
+
+  "battery": {
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-charging": "󰂄 {capacity}%"
+  },
+
+  "tray": {
+    "spacing": 10
+  }
+}
