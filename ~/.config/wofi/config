@@ -1,0 +1,34 @@
+# ==========================================
+# CYBER LOOK FOR SEARCHING IN WOFI 
+# also change the icon and prompt to your liking 
+# WOFI COMMAND INTERFACE LAYER
+# ==========================================
+
+show=drun
+
+width=780
+height=560
+location=center
+
+prompt=  CYBER GENTOO SEARCH
+
+term=kitty
+
+allow_images=true
+image_size=46
+
+insensitive=true
+matching=fuzzy
+
+no_actions=true
+
+gtk_dark=true
+
+hide_scroll=false
+
+columns=2
+lines=10
+
+layer=overlay
+
+sort_order=alphabetical
