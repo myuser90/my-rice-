@@ -1,0 +1,203 @@
+/* ==========================================
+   CYBER LOOK
+   WOFI UI SYSTEM LAYER
+========================================== */
+
+
+/* ==========================================
+   TYPOGRAPHY ENGINE
+========================================== */
+
+* {
+    font-family: "JetBrainsMono Nerd Font", "Inter";
+    font-size: 13px;
+}
+
+
+/* ==========================================
+   COLOR SYSTEM (UI DESIGN TOKENS)
+========================================== */
+
+@define-color base      #1a1a2a;
+@define-color crust     #0f0f17;
+
+@define-color surface0  #313244;
+@define-color surface1  #45475a;
+
+@define-color text      #cdd6f4;
+@define-color subtext   #a6adc8;
+
+@define-color gentoo    #4fd6be;
+@define-color mauve     #cba6f7;
+@define-color blue      #89b4fa;
+
+@define-color rosewater #f5e0dc;
+
+
+/* ==========================================
+   WINDOW LAYER (SYSTEM OVERLAY CORE)
+========================================== */
+
+window {
+    background-color: alpha(@base, 0.92);
+
+    border-radius: 24px;
+
+    border: 1px solid alpha(@surface1, 0.35);
+
+    box-shadow:
+        0 0 0 1px alpha(@crust, 0.8),
+        0 30px 90px rgba(0, 0, 0, 0.80),
+        0 0 30px alpha(@gentoo, 0.22),
+        0 0 70px alpha(@mauve, 0.08);
+
+    padding: 18px;
+
+    background-image: linear-gradient(
+        rgba(255,255,255,0.02),
+        rgba(0,0,0,0.06)
+    );
+}
+
+
+/* ==========================================
+   LAYOUT ENGINE (UI STRUCTURE)
+========================================== */
+
+#outer-box {
+    margin: 14px;
+}
+
+#inner-box {
+    margin-top: 10px;
+}
+
+#scroll {
+    margin: 0;
+}
+
+
+/* ==========================================
+   INPUT LAYER (COMMAND NODE)
+========================================== */
+
+#input {
+    background-color: alpha(@crust, 0.70);
+
+    color: @text;
+
+    padding: 16px 18px;
+
+    border-radius: 16px;
+
+    border: 1px solid alpha(@surface1, 0.55);
+
+    margin-bottom: 14px;
+
+    letter-spacing: 0.6px;
+
+    transition: all 0.2s ease;
+}
+
+
+/* INPUT ACTIVE STATE = SYSTEM FOCUS */
+#input:focus {
+    border: 1px solid alpha(@gentoo, 0.65);
+
+    box-shadow:
+        0 0 0 2px alpha(@gentoo, 0.18),
+        0 0 25px alpha(@gentoo, 0.18);
+}
+
+
+/* ==========================================
+   ENTRY SYSTEM (APPLICATION NODES)
+========================================== */
+
+#entry {
+    padding: 12px 14px;
+
+    margin: 5px 0;
+
+    border-radius: 12px;
+
+    background-color: alpha(@surface0, 0.20);
+
+    transition: all 0.18s ease;
+}
+
+
+/* ENTRY HOVER = ACTIVATION FEEDBACK */
+#entry:hover {
+    background-color: alpha(@surface0, 0.55);
+
+    transform: translateX(3px);
+}
+
+
+/* ENTRY SELECTED = SYSTEM SIGNAL */
+#entry:selected {
+    background: linear-gradient(
+        90deg,
+        alpha(@gentoo, 0.35),
+        alpha(@mauve, 0.18),
+        rgba(0,0,0,0)
+    );
+
+    border-left: 3px solid @gentoo;
+}
+
+#entry:selected #text {
+    color: @text;
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+
+/* ==========================================
+   ICON SYSTEM
+========================================== */
+
+#img {
+    margin-right: 12px;
+    opacity: 0.9;
+}
+
+#entry:hover #img {
+    opacity: 1;
+}
+
+
+/* ==========================================
+   TEXT SYSTEM
+========================================== */
+
+#text {
+    color: @text;
+    margin-left: 6px;
+}
+
+
+/* ==========================================
+   SCROLLBAR SYSTEM (SECONDARY UI LAYER)
+========================================== */
+
+scrollbar {
+    background: transparent;
+    width: 6px;
+}
+
+scrollbar slider {
+    background: alpha(@surface1, 0.35);
+    border-radius: 10px;
+}
+
+
+/* ==========================================
+   GLOBAL TRANSITIONS (UI CONSISTENCY LAYER)
+========================================== */
+
+#entry,
+#input {
+    transition: all 0.18s ease;
+}
