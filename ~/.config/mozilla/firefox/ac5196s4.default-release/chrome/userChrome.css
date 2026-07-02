@@ -1,0 +1,214 @@
+/* ==========================================================
+      creator: me
+      Made for Firefox v152 gecko 2026
+========================================================== */
+
+/* ---------- GLOBAL COLORS ---------- */
+
+:root{
+
+    --bg:#0d1117;
+    --bg2:#141922;
+    --bg3:#1b2230;
+
+    --cyan:#61caff;
+    --purple:#9d8cff;
+
+    --text:#dde7f2;
+    --text2:#aeb8c8;
+
+}
+
+/* ---------- TOOLBAR ---------- */
+
+#navigator-toolbox{
+
+    background:linear-gradient(
+        180deg,
+        #151a22,
+        #0d1117
+    ) !important;
+
+    border:none !important;
+
+    box-shadow:
+        inset 0 -1px rgba(255,255,255,.03),
+        0 15px 35px rgba(0,0,0,.45);
+
+}
+
+/* ---------- NAV BAR ---------- */
+
+#nav-bar{
+
+    padding:10px 16px !important;
+
+}
+
+/* ---------- URL BAR ---------- */
+
+#urlbar-background{
+
+    background:rgba(30,37,50,.90)!important;
+
+    border-radius:18px!important;
+
+    border:1px solid rgba(97,202,255,.18)!important;
+
+    box-shadow:
+        inset 0 1px rgba(255,255,255,.05),
+        0 0 15px rgba(97,202,255,.08);
+
+}
+
+#urlbar[open] #urlbar-background{
+
+    border:1px solid rgba(97,202,255,.40)!important;
+
+    box-shadow:
+        0 0 25px rgba(97,202,255,.22);
+
+}
+
+/* ---------- TABS ---------- */
+
+.tabbrowser-tab{
+
+    padding-inline:6px!important;
+
+}
+
+.tab-background{
+
+    border-radius:18px!important;
+
+    transition:.25s!important;
+
+}
+
+.tabbrowser-tab:hover .tab-background{
+
+    background:#1f2634!important;
+
+}
+
+.tabbrowser-tab[selected] .tab-background{
+
+    background:linear-gradient(
+        145deg,
+        #20293a,
+        #2b3245
+    )!important;
+
+    border:1px solid rgba(97,202,255,.25)!important;
+
+    box-shadow:
+
+        0 0 18px rgba(97,202,255,.10),
+
+        inset 0 1px rgba(255,255,255,.06);
+
+}
+
+/* ---------- TAB TEXT ---------- */
+
+.tab-label{
+
+    font-weight:600!important;
+
+    letter-spacing:.2px!important;
+
+}
+
+/* ---------- BUTTONS ---------- */
+
+toolbarbutton{
+
+    border-radius:16px!important;
+
+    transition:.25s!important;
+
+}
+
+toolbarbutton:hover{
+
+    background:rgba(97,202,255,.12)!important;
+
+    box-shadow:
+
+        0 0 12px rgba(97,202,255,.08);
+
+}
+
+toolbarbutton:active{
+
+    transform:scale(.96);
+
+}
+
+/* ---------- BOOKMARKS ---------- */
+
+toolbarbutton.bookmark-item{
+
+    border-radius:14px!important;
+
+}
+
+/* ---------- MENUS ---------- */
+
+menupopup{
+
+    border-radius:18px!important;
+
+    background:#161d29!important;
+
+    border:1px solid rgba(97,202,255,.15)!important;
+
+}
+
+/* ---------- FIND BAR ---------- */
+
+findbar{
+
+    border-radius:18px!important;
+
+}
+
+/* ---------- SIDEBAR ---------- */
+
+#sidebar-box{
+
+    border:none!important;
+
+}
+
+/* ---------- REMOVE SEPARATORS ---------- */
+
+#TabsToolbar,
+#PersonalToolbar{
+
+    border:none!important;
+
+}
+
+/* ---------- SCROLLBARS ---------- */
+
+*{
+
+    scrollbar-width:thin!important;
+
+}
+
+/* ---------- SMOOTHNESS ---------- */
+
+*{
+
+    transition:
+
+        background-color .22s,
+
+        box-shadow .22s,
+
+        border-color .22s!important;
+
+}
