@@ -1,0 +1,105 @@
+/* =====================================================
+          change till it fits you
+===================================================== */
+
+@-moz-document url-prefix("about:"){
+
+:root{
+
+    --page:#0f131b;
+
+    --card:#171d28;
+
+    --card2:#202838;
+
+    --text:#e2ebf5;
+
+    --accent:#61caff;
+
+}
+
+html{
+
+    background:var(--page)!important;
+
+}
+
+body{
+
+    background:var(--page)!important;
+
+    color:var(--text)!important;
+
+}
+
+/* Cards */
+
+.card,
+.section,
+.info-box{
+
+    background:var(--card)!important;
+
+    border-radius:22px!important;
+
+    border:1px solid rgba(97,202,255,.12)!important;
+
+    box-shadow:
+
+        0 8px 30px rgba(0,0,0,.35);
+
+}
+
+/* Buttons */
+
+button{
+
+    border-radius:16px!important;
+
+    background:#242d40!important;
+
+    transition:.25s!important;
+
+}
+
+button:hover{
+
+    background:#2d3850!important;
+
+    box-shadow:
+
+        0 0 16px rgba(97,202,255,.18);
+
+}
+
+/* Inputs */
+
+input,
+textarea,
+select{
+
+    border-radius:14px!important;
+
+    background:#1c2433!important;
+
+}
+
+/* Links */
+
+a{
+
+    color:#7bd5ff!important;
+
+    text-decoration:none!important;
+
+}
+
+a:hover{
+
+    text-shadow:
+
+        0 0 8px rgba(97,202,255,.35);
+
+}
+
+}
